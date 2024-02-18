@@ -1,6 +1,6 @@
 let feedbackPositivo = 1;
 let feedbackNegativo = 1;
-const Cookies = require('js-cookie');
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
