@@ -136,7 +136,7 @@ color: var(--cor-terciaria);
     align-items: center;
     margin: 2% 5%;
     width: auto;
-    margin:auto;
+    
     
     
 }
@@ -260,6 +260,8 @@ width: auto;
     font-size: 1.52rem;
     font-weight: 300;
     color: var(--cor-terciaria); 
+    flex-direction: column;
+    display: flex;
 }
 
 .curriculo__habilidades__lista {

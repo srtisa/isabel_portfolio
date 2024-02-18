@@ -1,5 +1,7 @@
 let feedbackPositivo = 1;
 let feedbackNegativo = 1;
+const Cookies = require('js-cookie');
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Verifica se já existem contadores armazenados nos cookies
