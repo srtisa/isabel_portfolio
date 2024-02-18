@@ -2,10 +2,10 @@ let feedbackPositivo = 1;
 let feedbackNegativo = 1;
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Verifica se já existem contadores armazenados no localStorage
-    if(localStorage.getItem('feedbackPositivo') !== null && localStorage.getItem('feedbackNegativo') !== null) {
-        feedbackPositivo = parseInt(localStorage.getItem('feedbackPositivo'));
-        feedbackNegativo = parseInt(localStorage.getItem('feedbackNegativo'));
+    // Verifica se já existem contadores armazenados nos cookies
+    if(Cookies.get('feedbackPositivo') !== undefined && Cookies.get('feedbackNegativo') !== undefined) {
+        feedbackPositivo = parseInt(Cookies.get('feedbackPositivo'));
+        feedbackNegativo = parseInt(Cookies.get('feedbackNegativo'));
         atualizarContadores();
     }
     
@@ -18,23 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
     // Função para atualizar o resultado
     function atualizarResultado(gostei) {
         const resultadoDiv = document.querySelector('.avaliacoes__resultado');
-        const btnEnvio = document.getElementById('envio');
         
         if (gostei) {
             resultadoDiv.textContent = 'Obrigado pelo seu feedback positivo! :)';
             feedbackPositivo++;
         } else {
-            resultadoDiv.textContent = 'Lamentamos que você não tenha gostado da experiência. :(';
+            resultadoDiv.textContent = 'Lamento que você não tenha gostado da experiência. :(';
             feedbackNegativo++;
         }
-
 
         // Atualiza os contadores de feedbacks positivos e negativos
         atualizarContadores();
 
-        // Armazena os contadores no localStorage
-        localStorage.setItem('feedbackPositivo', feedbackPositivo);
-        localStorage.setItem('feedbackNegativo', feedbackNegativo);
+        // Armazena os contadores nos cookies
+        Cookies.set('feedbackPositivo', feedbackPositivo, { expires: 7 });
+        Cookies.set('feedbackNegativo', feedbackNegativo, { expires: 7 });
     }
 
     // Adiciona event listener para o botão "Gostei"

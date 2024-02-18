@@ -110,6 +110,7 @@ color: var(--cor-terciaria);
 
 .apresentacao__botoes__link__img {
     width: 1.87rem;
+
    
     
 }
@@ -323,6 +324,7 @@ width: auto;
     .curriculo{
         padding: 2%;
         justify-content: center;
+        text-align: start;
     }
 
     .apresentacao__conteudo, .curriculo__apresentacao{
