@@ -247,6 +247,7 @@ width: auto;
     padding: 1.25rem;
     border-radius: 1.25rem;
     transition: all 1s;
+    text-decoration: none;
 }
 .curriculo__outrasformacoes__elementos:hover {
     background-color: var(--cor-secundaria);
@@ -307,9 +308,12 @@ width: auto;
 #nao_gostei:hover{
     background-color: #ff0000;
     border-color: #ff0000;
-}
+} 
 
-@media (max-width: 1200px) {
+
+.curriculo__outrasformacoes {}
+
+@media (max-width: 600px) {
     .cabecalho {
         padding: 10%;
     }
