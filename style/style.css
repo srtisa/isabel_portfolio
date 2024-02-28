@@ -116,8 +116,14 @@ color: var(--cor-terciaria);
 }
 
 .section__img {
-    border-radius: 10%;
+    border-radius: 50%;
     width: 50%;
+    
+}
+
+.section__img:hover{
+    width: 51%;
+    transition: 2s;
 }
 
 .rodape {
@@ -359,6 +365,10 @@ width: auto;
         display: flex;
         flex-direction: column-reverse;
         align-items: center ;
+    }
+
+    .section__img{
+        width: 70%;
     }
    
 }
