@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap')
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --cor-primaria: #000;
+    --cor-secundaria: #f5f5f5;
+    --cor-terciaria: #56A1BF;
+    --cor-hover: #2981A9;
+    --fonte-titulo:  "MuseoModerno", sans-serif;
+    --fonte-normal: "Roboto", sans-serif;
+}
+body {
+    box-sizing: border-box;
+    height: 100vh;  
+    background-color:var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 3rem;
+}
+
+
+
+.cabecalho__menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.cabecalho__menu__tags {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {
+    display: flex ;
+    flex-direction: row-reverse;
+    gap:2rem;
+    justify-content: space-between;
+    
+}
+
+.apresentacao__conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+    
+}
+.apresentacap__conteudo__titulo {
+    font-size: 3rem;
+    font-family: var(--fonte-titulo);
+    
+}
+/*textos aqui*/
+.apresentacap__conteudo__texto, .curriculo__apresentacao__titulo__p, .curriculo__apresentacao__educacao__titulo__elementos{
+    font-size: 1.5rem;
+    font-family: var(--fonte-normal);
+}
+
+.apresentacao__botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 2rem;  
+}
+
+.section__img {
+    border-radius: 50%;
+    border: var(--cor-primaria) dotted;
+    width: 50%;
+}
+
+.apresentacao__botoes__link {
+    font-family: var(--fonte-titulo);
+    display: flex;
+    justify-content: center;
+    border:  solid var(--cor-secundaria);
+    border-radius: 3rem;
+    width: 70%;
+    gap:1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    padding:1.34rem 0rem;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    
+}
+
+.apresentacao__botoes__link:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border-color: var(--cor-secundaria);
+    font-weight: 500;
+    cursor: pointer;
+    transition: step-start;
+    transition: 1s;
+}
+
+.apresentacao__botoes__link__img {
+    width: 1.87rem;
+   
+}
+/*titulos aqui*/
+.titulo__projeto, .curriculo__apresentacao__titulo, .curriculo__outrasformacoes__titulo, .curriculo__habilidades, .titulos__h2 {
+font-size: 2.25rem;
+font-family: var(--fonte-titulo);
+text-align: center;
+}
+
+.projetos {
+    padding: 3rem;
+ } 
+
+
+.projetos__unidade{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+	background-color: var(--cor-secundaria);
+	border-radius: 0.6rem;
+	padding: 1.30rem;
+	margin: 1.30rem;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transition: ease;
+    transition: 2s;
+    transform: scale(1.2);
+}
+.card h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+	font-size: 1.6px;
+	margin-bottom: 0.6rem;
+}
+
+.card p {
+    font-family: var(--fonte-normal);
+    color: var(--cor-primaria);
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 1.30rem;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 1.30rem;
+
+}
+
+.card button{
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+   
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.apresentacao__curriculo {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.habilidades__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.card-text {
+    font-family: var(--fonte-normal);
+    
+}
+
+.curriculo__outrasformacoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.80rem;
+    justify-content: center;
+    
+    
+}
+
+.curriculo__outrasformacoes__elementos {
+    font-family: var(--fonte-normal);
+    font-size: 1.5rem; 
+    border-style: solid;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    transition: all 1s;
+    width: 11rem;
+    transition: transform 0.3s ease;
+
+}
+
+.curriculo__outrasformacoes__elementos:hover{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    transition: linear 0.5s;
+    font-weight: 500;    
+}
+
+footer {
+    text-align: center;
+    font-family: var(--fonte-normal);
+    padding: 1rem;
+}
+
+@media (max-width: 500px){
+    .cabecalho__menu{
+        justify-content: space-between;
+        margin-bottom: 5rem;
+    }
+    .apresentacao{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__botoes__link{
+        font-size: 1.5rem;
+    }
+
+    .section__img{
+        width: 15rem;
+        align-items: center;
+        margin: auto;
+    }
+
+    .projetos{
+        padding: 0;
+    }
+    .card{
+        width: 100vh;
+       
+    }
+
+
+}
+
+@media (max-width: 800px){
+    .cabecalho__menu{
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+    .apresentacao{
+        display: flex;
+        flex-direction: column;
+        
+    } 
+    
+    .apresentacao__botoes__link{
+        font-size: 1.5rem;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+        
+    }
+
+    .habilidades__cards{
+     justify-content: center;
+     
+    }
+     .card{
+        width: auto;
+    }
+
+    .section__img{
+        width: 15rem;
+        align-items: center;
+        margin: auto;
+    }
+
+    .projetos{
+        padding: 0;
+    }
+   
+
+}
+
+
+
