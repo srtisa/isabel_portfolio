@@ -98,7 +98,7 @@ body {
     font-weight: 500;
     padding: 1.34rem 0rem;
     text-decoration: none;
-    color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     background-color: var(--cor-secundaria);
 }
 
